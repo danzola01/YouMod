@@ -3,7 +3,7 @@
 ## Current state
 
 - Code fork: https://github.com/danzola01/YouMod
-- Personal branch: `sidestore`; upstream branch: `Tonwalter888/YouMod/main`.
+- Personal/default branch: `sidestore`; upstream branch: `Tonwalter888/YouMod/main`.
 - Initial upstream commit: `fb6a9f6f3bbfcbe8aa8b92debda6405f2b7be2d7`.
 - Base IPA: `com.google.ios.youtube-21.40.5-Decrypted.ipa` in the project root.
 - Inspection: `base-ipa.json` records integrity, version, minimum OS, hash and
@@ -12,7 +12,8 @@
   Metadata checks do not establish the binary's provenance or device behavior.
 - Target reported by user: iPhone 17, iOS 27.0. Base IPA requires iOS 17.0.
 - Upload destination: user selected an unpublished draft release in the fork.
-  Base release tag: `base-youtube-21.40.5`. Upload/build preparation in progress.
+  Base release tag: `base-youtube-21.40.5`. Uploaded and remote asset digest
+  verified against the local SHA-256.
 - User confirmed SideStore is installed and refresh works on the target phone.
   YouMod installation and on-device feature checks remain pending.
 
@@ -53,7 +54,7 @@ in this fork to preserve the base; manage old output drafts individually.
 Dispatch the personal workflow using the saved inputs:
 
 ```bash
-gh workflow run ipa.yml --repo danzola01/YouMod --ref sidestore --json < config/sidestore-inputs.json
+bash scripts/build_ipa.sh
 gh run list --repo danzola01/YouMod --workflow ipa.yml --branch sidestore
 ```
 
