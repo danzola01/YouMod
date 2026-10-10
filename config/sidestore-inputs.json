@@ -1,0 +1,19 @@
+{
+  "repo": "danzola01/YouMod",
+  "branch": "sidestore",
+  "ipa_url": "",
+  "display_name": "YouMod",
+  "bundle_id": "com.danzola.youmod",
+  "youpip": true,
+  "ytuhd": false,
+  "ryd": false,
+  "abconfig": false,
+  "youquality": false,
+  "demc": false,
+  "ytweaks": false,
+  "youslider": false,
+  "gonerino": false,
+  "ytshare": false,
+  "volboost": false,
+  "ipa_sha256": "ddc152ce5ceab2d008f82fd44337360f7cb040c3da5e6d784ec255cda111ae5a"
+}

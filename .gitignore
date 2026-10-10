@@ -1,0 +1,14 @@
+*.ipa
+*.deb
+*.mobileprovision
+.env
+.env.*
+!.env.example
+.secrets/
+output/
+Payload/
+ytextracted/
+.theos/
+packages/
+__pycache__/
+.DS_Store

@@ -1,0 +1,71 @@
+{
+  "filename": "com.google.ios.youtube-21.40.5-Decrypted.ipa",
+  "size_bytes": 136581456,
+  "sha256": "ddc152ce5ceab2d008f82fd44337360f7cb040c3da5e6d784ec255cda111ae5a",
+  "archive_crc": "passed",
+  "bundle_id": "com.google.ios.youtube",
+  "version": "21.40.5",
+  "build": "21.40.5",
+  "minimum_os": "17.0",
+  "executable": "Payload/YouTube.app/YouTube",
+  "encryption": {
+    "Payload/YouTube.app/YouTube": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 186580992,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/Frameworks/widevine_cdm_secured_ios.framework/widevine_cdm_secured_ios": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 1228800,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/PlugIns/IntentsExtension.appex/IntentsExtension": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 114688,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/PlugIns/NotificationContentExtension.appex/NotificationContentExtension": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 1409024,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/PlugIns/NotificationServiceExtension.appex/NotificationServiceExtension": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 4718592,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/PlugIns/ShareExtension.appex/ShareExtension": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 2637824,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/PlugIns/WidgetKitExtension.appex/WidgetKitExtension": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 1441792,
+        "cryptid": 0
+      }
+    ]
+  },
+  "dylibs": [],
+  "profiles": []
+}
