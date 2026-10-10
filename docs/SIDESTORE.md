@@ -17,7 +17,7 @@
 - First build succeeded: https://github.com/danzola01/YouMod/actions/runs/38014046024
   (source/workflow commit `0411203b7a3c0d4d943a239d44d419602d3cff36`).
 - Output draft tag: `youmod-ipa1`; owner-only release page:
-  https://github.com/danzola01/YouMod/releases/tag/untagged-627361f5fe57922d5159
+  https://github.com/danzola01/YouMod/releases/tag/untagged-27a7a06a4ed987d49f66
 - Final IPA: `output/YouMod_21.40.5_v2.0.0.ipa` (129,310,334 bytes).
   SHA-256: `7410bafa51cda6c7b1f62e1f8f70bd6128ebdba7913876548825cbdf7525f2ba`.
   `built-ipa.json` records successful integrity/hash/encryption checks and the
