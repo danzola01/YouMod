@@ -1,0 +1,107 @@
+{
+  "filename": "YouMod_21.40.5_v2.0.0.ipa",
+  "size_bytes": 129310334,
+  "sha256": "7410bafa51cda6c7b1f62e1f8f70bd6128ebdba7913876548825cbdf7525f2ba",
+  "archive_crc": "passed",
+  "bundle_id": "com.danzola.youmod",
+  "version": "21.40.5",
+  "build": "21.40.5",
+  "minimum_os": "17.0",
+  "executable": "Payload/YouTube.app/YouTube",
+  "encryption": {
+    "Payload/YouTube.app/PlugIns/OpenYouTubeSafariExtension.appex/OpenYouTubeSafariExtension": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 16384,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/YouTube": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 186580992,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/Frameworks/YouPiP.dylib": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 49152,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/Frameworks/YouGroupSettings.dylib": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 16384,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/Frameworks/UncappedAVPlayer.dylib": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 16384,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/Frameworks/CydiaSubstrate.framework/CydiaSubstrate": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 147456,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/Frameworks/widevine_cdm_secured_ios.framework/widevine_cdm_secured_ios": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 1228800,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/Frameworks/YTVideoOverlay.dylib": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 32768,
+        "cryptid": 0
+      }
+    ],
+    "Payload/YouTube.app/Frameworks/YouMod.dylib": [
+      {
+        "slice_offset": 0,
+        "cryptoff": 16384,
+        "cryptsize": 557056,
+        "cryptid": 0
+      }
+    ]
+  },
+  "dylibs": [
+    "Payload/YouTube.app/Frameworks/YouPiP.dylib",
+    "Payload/YouTube.app/Frameworks/YouGroupSettings.dylib",
+    "Payload/YouTube.app/Frameworks/UncappedAVPlayer.dylib",
+    "Payload/YouTube.app/Frameworks/YTVideoOverlay.dylib",
+    "Payload/YouTube.app/Frameworks/YouMod.dylib"
+  ],
+  "profiles": [],
+  "injected_load_commands": [
+    "@rpath/UncappedAVPlayer.dylib",
+    "@rpath/YouGroupSettings.dylib",
+    "@rpath/YouMod.dylib",
+    "@rpath/YouPiP.dylib",
+    "@rpath/YTVideoOverlay.dylib"
+  ],
+  "display_name": "YouMod",
+  "extensions": [
+    "Payload/YouTube.app/PlugIns/OpenYouTubeSafariExtension.appex/Info.plist"
+  ],
+  "run_url": "https://github.com/danzola01/YouMod/actions/runs/38014046024",
+  "draft_release_tag": "youmod-ipa1",
+  "draft_release_url": "https://github.com/danzola01/YouMod/releases/tag/untagged-627361f5fe57922d5159"
+}

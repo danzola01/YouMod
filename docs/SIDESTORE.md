@@ -14,6 +14,17 @@
 - Upload destination: user selected an unpublished draft release in the fork.
   Base release tag: `base-youtube-21.40.5`. Uploaded and remote asset digest
   verified against the local SHA-256.
+- First build succeeded: https://github.com/danzola01/YouMod/actions/runs/38014046024
+  (source/workflow commit `0411203b7a3c0d4d943a239d44d419602d3cff36`).
+- Output draft tag: `youmod-ipa1`; owner-only release page:
+  https://github.com/danzola01/YouMod/releases/tag/untagged-627361f5fe57922d5159
+- Final IPA: `output/YouMod_21.40.5_v2.0.0.ipa` (129,310,334 bytes).
+  SHA-256: `7410bafa51cda6c7b1f62e1f8f70bd6128ebdba7913876548825cbdf7525f2ba`.
+  `built-ipa.json` records successful integrity/hash/encryption checks and the
+  injected load commands for YouMod, YouPiP, YouGroupSettings, YTVideoOverlay and
+  UncappedAVPlayer. Only the injected Safari app extension remains.
+- Anonymous asset API requests returned 404 for both the base and final IPA;
+  authenticated owner access works. Both releases were verified as drafts.
 - User confirmed SideStore is installed and refresh works on the target phone.
   YouMod installation and on-device feature checks remain pending.
 
@@ -70,6 +81,17 @@ YouPiP dylibs, the expected app identity, and encryption metadata. Record the ru
 URL, source commit, draft tag and output hash here. Never publish a release
 containing the proprietary IPA.
 
+Retrieve the first successful build locally:
+
+```bash
+gh release download youmod-ipa1 --repo danzola01/YouMod --pattern '*.ipa' --dir output
+python3 scripts/inspect_ipa.py output/YouMod_21.40.5_v2.0.0.ipa --require-decrypted
+```
+
+The first-build validation also confirmed that the main executable's Mach-O load
+commands reference the injected YouMod and YouPiP libraries, beyond checking
+that the files exist.
+
 ## Install and configure
 
 If SideStore is not already working, follow the current
@@ -79,10 +101,16 @@ The guide uses iloader on the computer and LocalDevVPN on the phone. Apple
 Account sign-in, trusting the computer/app, and Developer Mode belong on the
 user's devices; keep passwords and pairing files private.
 
-Transfer the final IPA to Files on the iPhone. Connect LocalDevVPN, open
-SideStore → My Apps → `+`, and choose the IPA. If SideStore offers to remove app
-extensions, removing them saves App IDs; the Safari/Share/widget features then
-will not be installed. Keep the same extension choice on later updates.
+On the iPhone, open Safari and sign into GitHub as `danzola01`. Open the output
+draft release linked above, expand Assets, and download
+`YouMod_21.40.5_v2.0.0.ipa`. Keep the release as a draft. Alternatively, transfer
+the verified local IPA to Files by a private method of the user's choice.
+
+Connect the VPN used by your existing SideStore setup, open SideStore → My Apps
+→ `+`, and choose the IPA from Files. If asked, remove the Safari app extension
+to save an App ID; YouMod and YouPiP are injected in the main app and remain.
+Keep the same extension choice on later updates. Launch YouMod after signing
+and installation finish.
 
 In YouTube settings, open YouMod and confirm:
 
