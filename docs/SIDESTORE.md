@@ -11,8 +11,10 @@
   No dylibs, provisioning profiles, or obvious YouMod/YouPiP resources were found.
   Metadata checks do not establish the binary's provenance or device behavior.
 - Target reported by user: iPhone 17, iOS 27.0. Base IPA requires iOS 17.0.
-- Upload destination: awaiting user selection. No IPA uploaded or build run yet.
-- SideStore setup and on-device feature checks: unconfirmed.
+- Upload destination: user selected an unpublished draft release in the fork.
+  Base release tag: `base-youtube-21.40.5`. Upload/build preparation in progress.
+- User confirmed SideStore is installed and refresh works on the target phone.
+  YouMod installation and on-device feature checks remain pending.
 
 ## Build choices
 
@@ -42,10 +44,24 @@ Changing the YouTube version requires another decrypted base IPA and build.
 
 ## Build and retrieve
 
-Use `.github/workflows/ipa.yml` on the `sidestore` branch after supplying the
-approved download source. Keep download credentials and signed URLs out of this
-document and the committed inputs file. The hosted macOS runner builds and
-injects the tweaks; no local Mac is required.
+The base IPA lives in draft release `base-youtube-21.40.5`. The workflow checks
+that the release is unpublished and uses its own `GITHUB_TOKEN` to download it
+with authenticated `gh release download`. No public download link or extra
+storage credentials are required. The upstream draft-cleanup workflow is disabled
+in this fork to preserve the base; manage old output drafts individually.
+
+Dispatch the personal workflow using the saved inputs:
+
+```bash
+gh workflow run ipa.yml --repo danzola01/YouMod --ref sidestore --json < config/sidestore-inputs.json
+gh run list --repo danzola01/YouMod --workflow ipa.yml --branch sidestore
+```
+
+The hosted macOS runner builds and injects the tweaks; no local Mac is required.
+For a new base version, inspect it, create another unpublished `base-youtube-*`
+release, and update `ipa_release` and `ipa_sha256` in the saved inputs. External
+URL downloads remain supported by setting `ipa_release` empty; keep credentials
+and signed URLs out of tracked files.
 
 Confirm the workflow succeeds and the output release remains a draft. Download
 with authenticated GitHub access, then inspect the resulting IPA for YouMod and

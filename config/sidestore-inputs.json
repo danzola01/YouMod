@@ -15,5 +15,6 @@
   "gonerino": false,
   "ytshare": false,
   "volboost": false,
-  "ipa_sha256": "ddc152ce5ceab2d008f82fd44337360f7cb040c3da5e6d784ec255cda111ae5a"
+  "ipa_sha256": "ddc152ce5ceab2d008f82fd44337360f7cb040c3da5e6d784ec255cda111ae5a",
+  "ipa_release": "base-youtube-21.40.5"
 }
