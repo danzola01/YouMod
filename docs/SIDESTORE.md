@@ -26,7 +26,10 @@
 - Anonymous asset API requests returned 404 for both the base and final IPA;
   authenticated owner access works. Both releases were verified as drafts.
 - User confirmed SideStore is installed and refresh works on the target phone.
-  YouMod installation and on-device feature checks remain pending.
+- User reported successful YouMod use and that all requested features work:
+  "I can do everything I wanted to." This is the user's overall report, not
+  independent device testing or confirmation of every specific test procedure.
+- User chose to retain the app name `YouMod` for now. No rebuild/rename needed.
 
 ## Build choices
 
@@ -126,17 +129,18 @@ In YouTube settings, open YouMod and confirm:
 
 ## Device acceptance checks
 
-All remain pending until the user tests the installed build:
+The user reports that all requested features work. The exact procedures below
+were provided for verification; each procedure was not separately confirmed.
 
 | Requirement | Check | Result |
 | --- | --- | --- |
-| Video/feed ads | Play several videos and browse Home | Pending |
-| SponsorBlock | Play a video with a known Sponsor segment; confirm auto-skip | Pending |
-| Downloads | Save video and audio, then play saved files in airplane mode | Pending |
-| PiP | Leave the app while a normal video plays | Pending |
-| Background/locked playback | Switch apps, then lock screen; audio continues | Pending |
-| Shorts hiding | Confirm shelf and tab are hidden after restarting | Pending |
-| Signing refresh | Refresh the installed app successfully in SideStore | Pending |
+| Video/feed ads | Play several videos and browse Home | Working — user report |
+| SponsorBlock | Play a video with a known Sponsor segment; confirm auto-skip | Working — user report |
+| Downloads | Save video and audio, then play saved files in airplane mode | Working — user report |
+| PiP | Leave the app while a normal video plays | Working — user report |
+| Background/locked playback | Switch apps, then lock screen; audio continues | Working — user report |
+| Shorts hiding | Confirm shelf and tab are hidden after restarting | Working — user report |
+| Signing refresh | Refresh the installed app successfully in SideStore | SideStore refresh works; YouMod refresh not separately confirmed |
 
 ## Updates
 
